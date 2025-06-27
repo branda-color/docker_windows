@@ -24,10 +24,10 @@ services:
     image: mysql:8.0
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_DATABASE: chacha_db
-      MYSQL_USER: chacha
-      MYSQL_PASSWORD: chachapass
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_DATABASE: 
+      MYSQL_USER: 
+      MYSQL_PASSWORD: 
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
@@ -41,8 +41,8 @@ services:
     environment:
       PMA_HOST: mysql
       PMA_PORT: 3306
-      PMA_USER: chacha
-      PMA_PASSWORD: chachapass
+      PMA_USER: 
+      PMA_PASSWORD: 
     ports:
       - "8081:80"
     restart: always
