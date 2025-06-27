@@ -1,0 +1,51 @@
+services:
+  php-service:
+    image: php:8.1-fpm
+    build:
+      context: ./php
+      dockerfile: DockerFile
+    container_name: php-fpm
+    volumes:
+      - ./php:/var/www/html
+    restart: always
+  nginx:
+    image: nginx:latest
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - php-service
+    cap_add:
+      - NET_BIND_SERVICE
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: chacha_db
+      MYSQL_USER: chacha
+      MYSQL_PASSWORD: chachapass
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: chacha
+      PMA_PASSWORD: chachapass
+    ports:
+      - "8081:80"
+    restart: always
+
+volumes:
+  mysql_data:
