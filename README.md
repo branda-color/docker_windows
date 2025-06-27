@@ -18,10 +18,10 @@ wsl需開啟權限(下在windows指令):Enable-WindowsOptionalFeature -Online -F
 ## 📁 專案目錄結構
 ├── docker-compose.yml  
 ├── nginx/  
-│ └── default.conf # Nginx 設定檔  
+│ └── nginx.conf # Nginx 設定檔  
 ├── php/  
 │ └── branda/ # Laravel 專案資料夾  
-├── Dockerfile # PHP service 用的 Dockerfile  
+│ └── Dockerfile # PHP service 用的 Dockerfile  
 
 ---
 ## 🔧 使用技術  
