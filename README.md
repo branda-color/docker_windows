@@ -5,13 +5,13 @@
 ---
 ## ⚙️ 前置作業
 需先啟用wsl
-wsl需開啟權限(下在windows指令):Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux 
-開啟指定wsl:wsl -d Ubuntu
-查看wsl是否成功指令:wsl -l -v
-1.修改設定
-<img width="590" alt="image" src="https://github.com/user-attachments/assets/265de78f-8616-4da4-aa80-749f8e40c192" />
-2.勾起來源選項
-<img width="382" alt="image" src="https://github.com/user-attachments/assets/9e95f93a-26a8-438f-b70b-3110e1ededd5" />
+wsl需開啟權限(下在windows指令):Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux   
+開啟指定wsl:wsl -d Ubuntu  
+查看wsl是否成功指令:wsl -l -v  
+1.修改設定  
+<img width="590" alt="image" src="https://github.com/user-attachments/assets/265de78f-8616-4da4-aa80-749f8e40c192" />  
+2.勾起來源選項  
+<img width="382" alt="image" src="https://github.com/user-attachments/assets/9e95f93a-26a8-438f-b70b-3110e1ededd5" />  
 
 ---
 
