@@ -1,10 +1,10 @@
-# 🐳 Laravel 開發環境建置（使用 Docker）
+# 🐳 Laravel 開發環境建置（使用 Docker）  
 
-本專案透過 `docker-compose` 建立一套包含 PHP、MySQL、Nginx 與 phpMyAdmin 的 Laravel 開發環境。
+本專案透過 `docker-compose` 建立一套包含 PHP、MySQL、Nginx 與 phpMyAdmin 的 Laravel 開發環境。  
 
 ---
-## ⚙️ 前置作業
-需先啟用wsl
+## ⚙️ 前置作業  
+需先啟用wsl  
 wsl需開啟權限(下在windows指令):Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux   
 開啟指定wsl:wsl -d Ubuntu  
 查看wsl是否成功指令:wsl -l -v  
@@ -16,15 +16,15 @@ wsl需開啟權限(下在windows指令):Enable-WindowsOptionalFeature -Online -F
 ---
 
 ## 📁 專案目錄結構
-├── docker-compose.yml
-├── nginx/
-│ └── default.conf # Nginx 設定檔
-├── php/
-│ └── branda/ # Laravel 專案資料夾
-├── Dockerfile # PHP service 用的 Dockerfile
+├── docker-compose.yml  
+├── nginx/  
+│ └── default.conf # Nginx 設定檔  
+├── php/  
+│ └── branda/ # Laravel 專案資料夾  
+├── Dockerfile # PHP service 用的 Dockerfile  
 
 ---
-## 🔧 使用技術
+## 🔧 使用技術  
 
 | 服務        | 描述                        |
 |-------------|-----------------------------|
@@ -34,7 +34,7 @@ wsl需開啟權限(下在windows指令):Enable-WindowsOptionalFeature -Online -F
 | phpMyAdmin  | 資料庫視覺化管理工具（port: 8081） |
 
 ---
-## 🐳 快速啟動指令
+## 🐳 快速啟動指令  
 ```bash
 # 啟動所有服務並建置
 docker-compose up --build -d
