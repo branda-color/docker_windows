@@ -24,14 +24,12 @@ services:
     image: mysql:8.0
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: 
+      MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: 
       MYSQL_USER: 
       MYSQL_PASSWORD: 
     volumes:
       - mysql_data:/var/lib/mysql
-    ports:
-      - "3306:3306"
     restart: always
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -42,7 +40,7 @@ services:
       PMA_HOST: mysql
       PMA_PORT: 3306
       PMA_USER: 
-      PMA_PASSWORD: 
+      PMA_PASSWORD:
     ports:
       - "8081:80"
     restart: always
